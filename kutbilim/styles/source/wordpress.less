@@ -1,0 +1,84 @@
+// Выравнивание
+
+.alignleft {
+	float: left;
+	margin: 0 15px 15px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 15px 15px;
+}
+
+.alignleft, .alignright {
+	@media (max-width: 639px) {
+		float: none;
+		display: block;
+		margin: 0 auto 15px;
+	}
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: auto;
+}
+
+// Формы
+
+html {
+	.wpcf7 {
+		&-not-valid-tip {
+			font-size: 14px;
+			color: #D85D40;
+		}
+		&-response-output {
+			margin: 15px 0 0 !important;
+			padding: 6px 10px !important;
+			border-width: 1px !important;
+			line-height: 1.35;
+			font-size: 14px;
+		}
+		.ajax-loader {
+			animation: spin 1s infinite;
+			width: auto;
+			height: auto;
+			margin: -2px 0 0 8px;
+			background: none;
+			font-size: 18px;
+
+			&:after {
+				content: '\F0772';
+				font-family: 'Material Design Icons', sans-serif;
+			}
+		}
+	}
+}
+
+// Пагинатор
+
+html {
+	.wp-pagenavi {
+		margin: 0 0 0 5px;
+		padding-bottom: 15px;
+		text-align: center;
+
+		a, span {
+			display: inline-block;
+			margin: 3px 5px 0 0;
+			padding: 5px 11px;
+			background: #EEE;
+			font-size: 14px;
+		}
+		a {
+			background: lighten(@secondary_color, 15%);
+			color: #FFF;
+
+			&:hover {
+				transition: @animation_speed;
+				background: @main_color;
+				text-decoration: none;
+			}
+		}
+	}
+}

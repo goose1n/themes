@@ -1,0 +1,11 @@
+// Ссылка
+
+.link(@default_color: @main_color, @hover_color: @text_color) {
+	color: @default_color;
+
+	&:hover {
+		transition: @animation_speed;
+		text-decoration: none;
+		color: @hover_color;
+	}
+}
